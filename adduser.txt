@@ -1,5 +1,5 @@
-create or replace function AddUser(firstname varchar, lastname varchar, email varchar, cardid char(4),
-								   cardpin char(4), validstart timestamp, validend timestamp)
+create or replace function AddUser(cardid char(4), cardpin char(4), email varchar, firstname varchar, lastname varchar,
+								   validend timestamp, validstart timestamp)
 returns bool as
 $$
 begin

@@ -1,0 +1,14 @@
+create or replace function ValidateUser(cardid char, cardpin char)                                                                   
+returns bool as
+$$
+begin
+perform distinct card_id, card_pin from userdata
+        where card_id = cardid and card_pin = cardpin;
+        if found then
+                return 1;
+        else
+                return 0;
+        end if;
+end
+$$
+language plpgsql;
