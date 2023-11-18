@@ -1,4 +1,4 @@
-create or replace function RemoveUser(cardid_number char(4))
+create or replace function RemoveUser(cardid char(4))
 returns bool as
 $$
 begin
