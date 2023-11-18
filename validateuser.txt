@@ -1,9 +1,9 @@
-create or replace function ValidateUser(cardid char, cardpin char)                                                                   
+create or replace function ValidateUser(cardId_ char, cardPin_ char)
 returns bool as
 $$
 begin
 perform distinct card_id, card_pin from userdata
-        where card_id = cardid and card_pin = cardpin;
+        where card_id = cardId_ and card_pin = cardPin_;
         if found then
                 return 1;
         else

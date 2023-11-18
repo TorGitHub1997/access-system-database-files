@@ -1,20 +1,19 @@
-create or replace function GetUser(cardid char(4))
+create or replace function GetUser(cardId_ char(4))
 returns table
-(	
-	firstname_ varchar,
-	lastname_ varchar,
-	email_address_ varchar,
-	cardid_ char(4),
-	cardpin_ char(4),
-	validstart_ timestamp,
-	validend_ timestamp
+(
+	firstName varchar,
+	lastName varchar,
+	emailAddress varchar,
+	cardId char,
+	cardPin char,
+	validStart timestamp,
+	validEnd timestamp
 )as
 $$
 begin
-	return query
-	select first_name, last_name, email_address, card_id, card_pin, valid_start, 
-		   valid_end from userdata where card_id = cardid order by card_ID;
-	 
+        return query
+        select first_name, last_name, email_address, card_id, card_pin, valid_start,
+                   valid_end from userdata where card_id = cardId_ order by card_id;
 end
 $$
 language plpgsql;

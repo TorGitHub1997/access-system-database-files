@@ -1,9 +1,9 @@
-create or replace function PeekUser(cardid char(4))
+create or replace function PeekUser(cardId_ char(4))
 returns bool as
 $$
 begin
 perform distinct card_id from userdata
-where card_id = cardid;
+where card_id = cardId_;
         if found then
                 return 1;
         else
