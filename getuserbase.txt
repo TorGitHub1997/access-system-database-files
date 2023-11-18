@@ -1,0 +1,14 @@
+create or replace function GetUserBase()
+returns table
+(	
+	firstname varchar,
+	lastname varchar,
+	cardid char	
+)as
+$$
+begin
+	return query
+	select first_name, last_name, card_id from userdata order by card_ID;
+end
+$$
+language plpgsql;

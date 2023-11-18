@@ -1,0 +1,14 @@
+create or replace function PeekUser(cardid_number char(4))
+returns bool as
+$$
+begin
+perform distinct card_id from userdata
+where card_id = cardid_number;
+	if found then
+		return 1;
+	else
+		return 0;
+	end if;		
+end
+$$
+language plpgsql;

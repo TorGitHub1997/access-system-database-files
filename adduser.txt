@@ -1,0 +1,15 @@
+create or replace function AddUser(firstname varchar, lastname varchar, email varchar, cardid char(4),
+								   cardpin char(4), validstart timestamp, validend timestamp)
+returns bool as
+$$
+begin
+	insert into userdata(first_name, last_name, email_address, card_id, card_pin, valid_start, valid_end)
+	values(firstname, lastname, email, cardid, cardpin, validstart, validend);
+	if found then
+		return 1;
+	else
+		return 0;
+	end if;
+end
+$$
+language plpgsql;

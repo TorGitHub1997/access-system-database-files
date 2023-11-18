@@ -1,0 +1,23 @@
+create or replace function UpdateUser(cardid_number char(4), firstname varchar, lastname varchar, email varchar, cardid char,
+									 cardpin char, validstart timestamp, validend timestamp)
+returns bool as
+$$
+begin
+	update userdata
+	set
+		first_name = firstname,
+		last_name = lastname,
+		email_address = email,
+		card_id = cardid,
+		card_pin = cardpin,
+		valid_start = validstart,
+		valid_end = validend
+	where card_id = cardid_number;
+	if found then
+		return 1;
+	else
+		return 0;
+	end if;		
+end
+$$
+language plpgsql;
