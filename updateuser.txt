@@ -1,5 +1,5 @@
-create or replace function UpdateUser(cardid_number char(4), cardid char, cardpin char, email varchar, firstname varchar, lastname varchar,
-                                        validend timestamp, validstart timestamp)                                                                   
+create or replace function UpdateUser(cardid char, cardpin char, email varchar, firstname varchar, lastname varchar, PreviousCardId char(4),
+                                        validend timestamp, validstart timestamp)
 returns bool as
 $$
 begin
@@ -7,12 +7,12 @@ begin
         set
                 first_name = firstname,
                 last_name = lastname,
-		email_address = email,
+                email_address = email,
                 card_id = cardid,
                 card_pin = cardpin,
                 valid_start = validstart,
                 valid_end = validend
-        where card_id = cardid_number;
+        where card_id = PreviousCardId;
         if found then
                 return 1;
         else
