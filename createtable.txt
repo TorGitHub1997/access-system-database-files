@@ -1,0 +1,15 @@
+Create table Userdata
+(
+	First_Name varchar(20),
+	Last_Name varchar(20),
+	Email_Address varchar(40),
+	Card_Id char(4) primary key,
+	Card_pin char(4),
+	Valid_Start timestamp,
+	Valid_End timestamp	
+);
+
+insert into userdata values('Ryan','Le','rl@gmail.com','0000','0001','2020-12-12T20:34:00Z','2020-12-12T20:34:00Z');
+insert into userdata values('Kristian','Klette','Email@gmail.com','1111','1234','2020-12-12T20:30:00Z','2020-12-12T20:35:00Z');
+insert into userdata values('Kristian','Klette','Email@gmail.com','2222','1234','2020-12-12T20:30:00Z','2020-12-12T20:35:00Z');
+
