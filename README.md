@@ -14,9 +14,9 @@
 ## Functions:
 ### AddUser()
 - Syntax: select * from adduser('CardId','CardPin','Email','Firstname','Lastname','Validend','Validstart');
--Side effect: Adds user to Userdata table
--returns true if added
--returns false if table not found
+- Side effect: Adds user to Userdata table
+- returns true if added
+- returns false if table not found
 ### UpdateUser()
 - Syntax: select * from updateuser('CardId','CardPin','Email','Firstname','Lastname','PreviousCardId','Validend','Validstart');
 - Side effects: Updates existing user in Userdata table
