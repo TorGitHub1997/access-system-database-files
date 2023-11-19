@@ -13,8 +13,7 @@
 - Valid_End timestamp
 ## Functions:
 ### AddUser()
--Syntax: 
-select * from adduser('CardId','CardPin','Email','Firstname','Lastname','Validend','Validstart');
+- Syntax: select * from adduser('CardId','CardPin','Email','Firstname','Lastname','Validend','Validstart');
 -Side effect: Adds user to Userdata table
 -returns true if added
 -returns false if table not found
