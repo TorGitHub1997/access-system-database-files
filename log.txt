@@ -1,0 +1,14 @@
+create or replace function log(cardId_ char(4), approvedEntry_ bool, timeOfEntry_ timestamp, doorNumber_ varchar)
+returns bool
+as
+$$
+begin
+        insert into accesslog values(cardId_, approvedEntry_, timeOfEntry_ , doorNumber_);
+		if found then
+			return true;
+		else
+			return false;
+		end if;	
+end
+$$
+language plpgsql;

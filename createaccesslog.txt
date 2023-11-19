@@ -1,0 +1,7 @@
+Create table AccessLog
+(
+        Card_Id char(4),
+		Approved_entry bool,
+        Time_Of_Entry timestamp,
+        Door_Number smallint      
+);

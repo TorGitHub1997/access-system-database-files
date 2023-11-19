@@ -1,0 +1,19 @@
+create or replace function Report(startDate_ Date, endDate_ Date)
+returns table
+(
+	cardId char,
+	approvedEntry bool,
+	timeOfEntry timestamp,
+	doorNumber varchar
+)
+as
+$$
+begin
+	return query
+        select * from accesslog
+		where
+			time_of_entry between startDate_ and endDate_
+		order by time_of_entry desc;	
+end
+$$
+language plpgsql;

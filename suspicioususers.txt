@@ -1,0 +1,14 @@
+create or replace function SuspiciousUsers()
+returns table
+(
+	cardId char
+)as
+$$
+begin
+	return query
+	select distinct card_id from accesslog
+	group by card_id
+	having count(approved_entry) >= 10;		 
+end
+$$
+language plpgsql;
