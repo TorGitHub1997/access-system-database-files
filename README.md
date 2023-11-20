@@ -4,6 +4,7 @@
 - validend and validstart timestamp: 'yyyy-mm-ddThh:mm:ssZ'
 
 # UserData
+##Coloums:
 - First_Name varchar(20)
 - Last_Name varchar(20)
 - Email_Address varchar(40)
@@ -45,8 +46,9 @@
 - Side effect: none
 - returns true if CardId_ and CardPin is found in same row in UserData
 - returns false if not found
-
+  
 # AccessLog
+##Coloums:
 - Card_Id char(4)
 - Approved_Entry bool
 - Time_Of_Entry timestamp
@@ -63,15 +65,30 @@
 - Syntax: select * from DoorReport('doorNumber_','startDate_','endDate_')
 - returns table from AccessData where doorNumber_ = door_number and Between startDate_ and endDate_
 ### Report()
-- Syntax: select * from DoorReport('doorNumber_','startDate_','endDate_')
+- Syntax: select * from Report('startDate_','endDate_')
+- Side effect: none
 - returns table from AccessData where Between startDate_ and endDate_
 ### SuspiciousUsers()
-- Syntax: select * from DoorReport()
+- Syntax: select * from SuspiciousUsers()
 - returns table with users who has approved_entry = false >= 10
+  
 # AlarmLog
+##Coloums:
 - Time_Of_Alarm timestamp
 - Door_Number varchar(4)
 - Alarm_Type varchar(7)
+
+## Functions:
+### AddAlarmLog()
+- Syntax: select * from AddAlarmLog('timeOfAlarm_', 'doorNumber_', 'alarmType_)
+- Side effect: Adds new Alarm data to AlarmLog table
+- returns true if added
+- returns false if table not found
+### AlarmReport()
+- Syntax: select * from AlarmReport('startDate_','endDate_')
+- Side effect: none
+- returns table from AlarmLog where Between startDate_ and endDate_
+
 
 
 
