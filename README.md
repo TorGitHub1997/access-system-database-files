@@ -4,7 +4,7 @@
 - validend and validstart timestamp: 'yyyy-mm-ddThh:mm:ssZ'
 
 # UserData
-##Coloums:
+## Coloums:
 - First_Name varchar(20)
 - Last_Name varchar(20)
 - Email_Address varchar(40)
@@ -48,7 +48,7 @@
 - returns false if not found
   
 # AccessLog
-##Coloums:
+## Coloums:
 - Card_Id char(4)
 - Approved_Entry bool
 - Time_Of_Entry timestamp
@@ -73,7 +73,7 @@
 - returns table with users who has approved_entry = false >= 10
   
 # AlarmLog
-##Coloums:
+## Coloums:
 - Time_Of_Alarm timestamp
 - Door_Number varchar(4)
 - Alarm_Type varchar(7)
