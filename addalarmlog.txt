@@ -1,0 +1,14 @@
+create or replace function AddAlarmLog(timeOfAlarm_ timestamp, doorNumber_ varchar(4), alarmType_ varchar(7))
+returns bool
+as
+$$
+begin
+        insert into AlarmLog values(timeOfAlarm_, doorNumber_, alarmType_);
+		if found then
+			return true;
+		else
+			return false;
+		end if;	
+	end
+$$
+language plpgsql;

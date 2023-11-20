@@ -1,0 +1,18 @@
+create or replace function AlarmReport(startDate_ Date, endDate_ Date)
+returns table
+(
+        timeOfAlarm timestamp,
+        doorNumber varchar,
+		alarmType varchar
+)
+as
+$$
+begin
+        return query
+        select * from alarmlog
+                where
+                        time_of_alarm between startDate_ and endDate_
+                order by time_of_alarm desc;
+end
+$$
+language plpgsql;
