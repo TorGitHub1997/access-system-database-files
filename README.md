@@ -56,7 +56,7 @@
 
 ## Functions:
 
-### Log()
+### AddAccessLog()
 - Syntax: select * from Log('CardId_','ApprovedEntry_', 'TimeOfEntry_', 'DoorNumber_')
 - Side effect: Adds new accesslog data to AccessLog table
 - returns true if added
@@ -64,12 +64,13 @@
 ### DoorReport()
 - Syntax: select * from DoorReport('doorNumber_','startDate_','endDate_')
 - returns table from AccessData where doorNumber_ = door_number and Between startDate_ and endDate_
-### Report()
+### AccessReport()
 - Syntax: select * from Report('startDate_','endDate_')
 - Side effect: none
 - returns table from AccessData where Between startDate_ and endDate_
 ### SuspiciousUsers()
 - Syntax: select * from SuspiciousUsers()
+- Side effect: none
 - returns table with users who has approved_entry = false >= 10
   
 # AlarmLog
