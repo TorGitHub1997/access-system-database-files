@@ -31,7 +31,7 @@
 - Syntax: GetUser: select * from GetUser('CardId_');
 - Side effects: none
 - returns Userdata table where CardId_ = Card_id
-- Coloums: firstName (varchar), lastName (varchar),emailAddress (varchar), card_Id char(4), validStart (timestamp), validEnd (timestamp)
+- Coloums: firstName (varchar), lastName (varchar),emailAddress (varchar), card_Id char(4), cardPind (char(4)), validStart (timestamp), validEnd (timestamp)
 ### PeekUser()
 - Syntax: select * from peekuser('CardId_');
 - Side effects: none
