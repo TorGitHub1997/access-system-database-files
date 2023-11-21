@@ -48,7 +48,7 @@
 - Side effect: none
 - Returns bool true if CardId_ and CardPin is found in same row in UserData
 - Returns bool false if not found
-  
+
 # AccessLog
 ## Coloums:
 - Card_Id char(4)
@@ -77,7 +77,7 @@
 - Side effect: none
 - Returns table with users who has approved_entry = false >= 10
 - Columns: cardId char(4)
-  
+
 # AlarmLog
 ## Coloums:
 - Time_Of_Alarm timestamp
@@ -95,8 +95,6 @@
 - Side effect: none
 - Returns table from AlarmLog where Between startDate_ and endDate_
 - Columns: timeOfAlarm timestamp, doorNumber varchar(4), alarmType varchar(7)
-  
-
 
 
 
