@@ -27,7 +27,7 @@
 - Syntax: GetUserBase: select * from GetUserbase();
 - Side effects: none
 - returns UserData table
-- Coloums: firstName (varchar), lastName (varchar), card_Id char(4)
+-> Coloums: firstName (varchar), lastName (varchar), card_Id char(4)
 ### GetUser()OK
 - Syntax: GetUser: select * from GetUser('CardId_');
 - Side effects: none
