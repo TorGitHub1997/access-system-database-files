@@ -8,7 +8,7 @@
 - First_Name varchar(20)
 - Last_Name varchar(20)
 - Email_Address varchar(40)
-- Card_Id char(4)
+- Card_Id char(4) (Primary Key)
 - Card_Pin char(4)
 - Valid_Start timestamp
 - Valid_End timestamp
@@ -90,10 +90,11 @@
 - Side effect: Adds new Alarm data to AlarmLog table
 - returns true if added
 - returns false if table not found
-### AlarmReport()
+### AlarmReport()OK
 - Syntax: select * from AlarmReport('startDate_','endDate_')
 - Side effect: none
 - returns table from AlarmLog where Between startDate_ and endDate_
+- Coloums: timeOfAlarm timestamp, doorNumber varchar(4), alarmType varchar(7)
   
 
 
