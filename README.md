@@ -66,6 +66,7 @@
 ### DoorReport()OK
 - Syntax: select * from DoorReport('doorNumber_','startDate_','endDate_')
 - returns table from AccessData where doorNumber_ = door_number and Between startDate_ and endDate_
+- Coloums: cardId char(4), approvedEntry (char(4)), timeOfEntry (timestamp), doorNumber (char(4))
 ### AccessReport()OK
 - Syntax: select * from AccessReport('startDate_','endDate_')
 - Side effect: none
