@@ -28,7 +28,7 @@
 - Side effects: none
 - returns UserData table
 - Coloums: firstName (varchar), lastName (varchar), card_Id char(4)
-### GetUser() OK
+### GetUser()OK
 - Syntax: GetUser: select * from GetUser('CardId_');
 - Side effects: none
 - returns Userdata table where CardId_ = Card_id
@@ -63,19 +63,19 @@
 - Side effect: Adds new accesslog data to AccessLog table
 - returns bool true if added
 - returns bool false if table not found
-### DoorReport() OK
+### DoorReport()OK
 - Syntax: select * from DoorReport('doorNumber_','startDate_','endDate_')
 - returns table from AccessData where doorNumber_ = door_number and Between startDate_ and endDate_
-### AccessReport() OK
+### AccessReport()OK
 - Syntax: select * from AccessReport('startDate_','endDate_')
 - Side effect: none
 - returns table from AccessData where Between startDate_ and endDate_
 - Coloums: cardId char(4), approvedEntry (char(4)), timeOfEntry (timestamp), doorNumber (char(4))
-### SuspiciousUsers() OK
+### SuspiciousUsers()OK
 - Syntax: select * from SuspiciousUsers()
 - Side effect: none
 - returns table with users who has approved_entry = false >= 10
-- - Coloums: cardId char(4)
+- Coloums: cardId char(4)
   
 # AlarmLog
 ## Coloums:
