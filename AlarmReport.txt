@@ -1,9 +1,9 @@
-create or replace function AlarmReport(startDate_ Date, endDate_ Date)
+create or replace function AlarmReport(startDate_ timestamp, endDate_ timestamp)
 returns table
 (
         timeOfAlarm timestamp,
         doorNumber varchar,
-		alarmType varchar
+	alarmType varchar
 )
 as
 $$
