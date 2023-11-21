@@ -27,26 +27,27 @@
 - Syntax: GetUserBase: select * from GetUserbase();
 - Side effects: none
 - returns UserData table
-### GetUser()
+- Coloums: firstName (varchar), lastName (varchar), card_Id char(4)
+### GetUser() OK
 - Syntax: GetUser: select * from GetUser('CardId_');
 - Side effects: none
 - returns Userdata table where CardId_ = Card_id
-- Coloums: firstName (varchar), lastName (varchar),emailAddress (varchar), card_Id char(4), cardPin (char(4)), validStart (timestamp), validEnd (timestamp)
+- Coloums: firstName (varchar), lastName (varchar),emailAddress (varchar), cardId char(4), cardPin (char(4)), validStart (timestamp), validEnd (timestamp)
 ### PeekUser()
 - Syntax: select * from peekuser('CardId_');
 - Side effects: none
-- returns true if user with CardId_ found
-- returns false if user with CardId_ not found
+- returns bool true if user with CardId_ found
+- returns bool false if user with CardId_ not found
 ### RemoveUser()
 - Syntax: select * from RemoveUser('CardId_')
 - Side effect: Removes user from UserData table with condition CardId_ = Card_Id
-- returns true if user found and removed
-- returns false if user not found
+- returns bool true if user found and removed
+- returns bool false if user not found
 ### ValidateUser()
 - Syntax: select * from ValidateUser('CardId_','CardPin_')
 - Side effect: none
-- returns true if CardId_ and CardPin is found in same row in UserData
-- returns false if not found
+- returns bool true if CardId_ and CardPin is found in same row in UserData
+- returns bool false if not found
   
 # AccessLog
 ## Coloums:
@@ -60,19 +61,21 @@
 ### AddAccessLog()
 - Syntax: select * from AddAccessLog('CardId_','ApprovedEntry_', 'TimeOfEntry_', 'DoorNumber_')
 - Side effect: Adds new accesslog data to AccessLog table
-- returns true if added
-- returns false if table not found
-### DoorReport()
+- returns bool true if added
+- returns bool false if table not found
+### DoorReport() OK
 - Syntax: select * from DoorReport('doorNumber_','startDate_','endDate_')
 - returns table from AccessData where doorNumber_ = door_number and Between startDate_ and endDate_
-### AccessReport()
+### AccessReport() OK
 - Syntax: select * from AccessReport('startDate_','endDate_')
 - Side effect: none
 - returns table from AccessData where Between startDate_ and endDate_
-### SuspiciousUsers()
+- Coloums: cardId char(4), approvedEntry (char(4)), timeOfEntry (timestamp), doorNumber (char(4))
+### SuspiciousUsers() OK
 - Syntax: select * from SuspiciousUsers()
 - Side effect: none
 - returns table with users who has approved_entry = false >= 10
+- - Coloums: cardId char(4)
   
 # AlarmLog
 ## Coloums:
