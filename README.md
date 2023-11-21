@@ -32,7 +32,7 @@
 - Syntax: GetUser: select * from GetUser('CardId_');
 - Side effects: none
 - returns Userdata table where CardId_ = Card_id
-- Coloums: firstName (varchar), lastName (varchar), emailAddress (varchar), cardId char(4), cardPin (char(4)), validStart (timestamp), validEnd (timestamp)
+-> Coloums: firstName (varchar), lastName (varchar), emailAddress (varchar), cardId char(4), cardPin (char(4)), validStart (timestamp), validEnd (timestamp)
 ### PeekUser()
 - Syntax: select * from peekuser('CardId_');
 - Side effects: none
@@ -66,17 +66,17 @@
 ### DoorReport()OK
 - Syntax: select * from DoorReport('doorNumber_','startDate_','endDate_')
 - returns table from AccessData where doorNumber_ = door_number and Between startDate_ and endDate_
-- Coloums: cardId char(4), approvedEntry (char(4)), timeOfEntry (timestamp), doorNumber (varchar(4))
+-> Coloums: cardId char(4), approvedEntry (char(4)), timeOfEntry (timestamp), doorNumber (varchar(4))
 ### AccessReport()OK
 - Syntax: select * from AccessReport('startDate_','endDate_')
 - Side effect: none
 - returns table from AccessData where Between startDate_ and endDate_
-- Coloums: cardId char(4), approvedEntry (char(4)), timeOfEntry (timestamp), doorNumber (varchar(4))
+-> Coloums: cardId char(4), approvedEntry (char(4)), timeOfEntry (timestamp), doorNumber (varchar(4))
 ### SuspiciousUsers()OK
 - Syntax: select * from SuspiciousUsers()
 - Side effect: none
 - returns table with users who has approved_entry = false >= 10
-- Coloums: cardId char(4)
+-> Coloums: cardId char(4)
   
 # AlarmLog
 ## Coloums:
@@ -94,7 +94,7 @@
 - Syntax: select * from AlarmReport('startDate_','endDate_')
 - Side effect: none
 - returns table from AlarmLog where Between startDate_ and endDate_
-- Coloums: timeOfAlarm timestamp, doorNumber varchar(4), alarmType varchar(7)
+-> Coloums: timeOfAlarm timestamp, doorNumber varchar(4), alarmType varchar(7)
   
 
 
