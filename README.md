@@ -23,7 +23,7 @@
 - Side effects: Updates existing user in Userdata table
 - returns true if user updated
 - returns false if user not found
-### GetUserBase()
+### GetUserBase()OK
 - Syntax: GetUserBase: select * from GetUserbase();
 - Side effects: none
 - returns UserData table
@@ -66,12 +66,12 @@
 ### DoorReport()OK
 - Syntax: select * from DoorReport('doorNumber_','startDate_','endDate_')
 - returns table from AccessData where doorNumber_ = door_number and Between startDate_ and endDate_
-- Coloums: cardId char(4), approvedEntry (char(4)), timeOfEntry (timestamp), doorNumber (char(4))
+- Coloums: cardId char(4), approvedEntry (char(4)), timeOfEntry (timestamp), doorNumber (varchar(4))
 ### AccessReport()OK
 - Syntax: select * from AccessReport('startDate_','endDate_')
 - Side effect: none
 - returns table from AccessData where Between startDate_ and endDate_
-- Coloums: cardId char(4), approvedEntry (char(4)), timeOfEntry (timestamp), doorNumber (char(4))
+- Coloums: cardId char(4), approvedEntry (char(4)), timeOfEntry (timestamp), doorNumber (varchar(4))
 ### SuspiciousUsers()OK
 - Syntax: select * from SuspiciousUsers()
 - Side effect: none
