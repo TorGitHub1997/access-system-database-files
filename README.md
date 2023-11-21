@@ -31,6 +31,8 @@
 - Syntax: GetUser: select * from GetUser('CardId_');
 - Side effects: none
 - returns Userdata table where CardId_ = Card_id
+-- Coloums:
+---firstName (varchar), lastName (varchar),emailAddress (varchar), card_Id char(4), validStart (timestamp), validEnd (timestamp)
 ### PeekUser()
 - Syntax: select * from peekuser('CardId_');
 - Side effects: none
@@ -89,6 +91,7 @@
 - Syntax: select * from AlarmReport('startDate_','endDate_')
 - Side effect: none
 - returns table from AlarmLog where Between startDate_ and endDate_
+  
 
 
 
