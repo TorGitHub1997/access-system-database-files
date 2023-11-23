@@ -1,6 +1,6 @@
-create or replace table AlarmLog
+create AlarmLog
 (
 	time_of_alarm timestamp,
 	door_number int,
-	alarm_type varchar(7)
+	alarm_type varchar(20)
 )
