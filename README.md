@@ -54,7 +54,7 @@
 - Card_Id char(4)
 - Approved_Entry bool
 - Time_Of_Entry timestamp
-- Door_Number varchar(4)
+- Door_Number int
 
 ## Functions:
 
@@ -81,8 +81,8 @@
 # AlarmLog
 ## Coloums:
 - Time_Of_Alarm timestamp
-- Door_Number varchar(4)
-- Alarm_Type varchar(7)
+- Door_Number int
+- Alarm_Type varchar(20)
 
 ## Functions:
 ### AddAlarmLog()
@@ -90,11 +90,11 @@
 - Side effect: Adds new Alarm data to AlarmLog table
 - Returns true if added
 - Returns false if table not found
-### AlarmReport()OK
+### AlarmReport()
 - Syntax: select * from AlarmReport('startDate_','endDate_')
 - Side effect: none
 - Returns table from AlarmLog where Between startDate_ and endDate_
-- Columns: timeOfAlarm timestamp, doorNumber varchar(4), alarmType varchar(7)
+- Columns: timeOfAlarm timestamp, doorNumber int, alarmType varchar(20)
 
 
 
