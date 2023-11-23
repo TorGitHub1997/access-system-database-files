@@ -1,4 +1,4 @@
-create or replace function AddAlarmLog(timeOfAlarm_ timestamp, doorNumber_ varchar(4), alarmType_ varchar(7))
+create or replace function AddAlarmLog(timeOfAlarm_ timestamp, doorNumber_ int, alarmType_ varchar(7))
 returns bool
 as
 $$

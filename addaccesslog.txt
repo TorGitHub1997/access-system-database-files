@@ -1,4 +1,4 @@
-create or replace function AddAccessLog(cardId_ char(4), approvedEntry_ bool, timeOfEntry_ timestamp, doorNumber_ varchar)
+create or replace function AddAccessLog(cardId_ char(4), approvedEntry_ bool, timeOfEntry_ timestamp, doorNumber_ int)
 returns bool
 as
 $$

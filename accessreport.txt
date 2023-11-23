@@ -4,7 +4,7 @@ returns table
         cardId char,
         approvedEntry bool,
         timeOfEntry timestamp,
-        doorNumber varchar
+        doorNumber int
 )
 as
 $$

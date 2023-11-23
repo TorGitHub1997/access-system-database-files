@@ -1,18 +1,18 @@
-create or replace function DoorReport(doorNumber_ varchar(4), startDate_ Date, endDate_ Date)
+create or replace function DoorReport(doorNumber_ int, startDate_ timestamp, endDate_ timestamp)
 returns table
 (
-	cardId char,
-	approvedEntry bool,
-	timeOfEntry timestamp,
-	doorNumber varchar
+        cardId char(4),
+        approvedEntry bool,
+        timeOfEntry timestamp,
+        doorNumber int
 )as
 $$
 begin
-	return query
-	select * from accesslog
-		where door_Number = doorNumber_
-		and time_of_entry between startDate_ and endDate_
-		order by time_of_entry desc;
+        return query
+        select * from accesslog
+                where door_Number = doorNumber_
+                and time_of_entry between startDate_ and endDate_
+                order by time_of_entry desc;
 end
 $$
 language plpgsql;

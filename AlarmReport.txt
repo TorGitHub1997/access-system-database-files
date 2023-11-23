@@ -2,7 +2,7 @@ create or replace function AlarmReport(startDate_ timestamp, endDate_ timestamp)
 returns table
 (
         timeOfAlarm timestamp,
-        doorNumber varchar,
+        doorNumber int,
 	alarmType varchar
 )
 as
